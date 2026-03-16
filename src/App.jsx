@@ -1,4 +1,3 @@
-// 1. ADDED 'Navigate' to the import list
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./pages/Login";
@@ -13,6 +12,7 @@ import PrivateRoute from "./components/auth/PrivateRoute";
 import ViewRO from "./pages/ViewRo";
 import ROList from "./pages/ROList";
 import CloseRO from "./pages/CloseRO";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
 
-        {/* --- Protected Routes (Wrapped in PrivateRoute) --- */}
+        {/* --- Protected Routes --- */}
         
         {/* Main Dashboard */}
         <Route
@@ -34,22 +34,22 @@ function App() {
           }
         />
 
-        {/* Job Cards & Work */}
+        {/* Job Cards & Work - Consolidated to ROList */}
         <Route
-          path="/job-cards"
+          path="/ro-list"
           element={
             <PrivateRoute>
-              <JobCards />
+              <ROList />
             </PrivateRoute>
           }
         />
         
-        {/* Changed path to match your Layout link '/job-list' */}
+        {/* This acts as the main Job Card list now */}
         <Route
           path="/job-list"
           element={
             <PrivateRoute>
-              <JobCardList />
+              <ROList />
             </PrivateRoute>
           }
         />
@@ -64,19 +64,20 @@ function App() {
         />
 
         <Route
-          path="/ro-list"
-          element={
-            <PrivateRoute>
-              <ROList />
-            </PrivateRoute>
-          }
-        />
-
-        <Route
           path="/view-ro/:id"
           element={
             <PrivateRoute>
               <ViewRO />
+            </PrivateRoute>
+          }
+        />
+
+        {/* FIXED: Added Missing Route for Close RO */}
+        <Route
+          path="/close-ro"
+          element={
+            <PrivateRoute>
+              <CloseRO />
             </PrivateRoute>
           }
         />
@@ -91,7 +92,7 @@ function App() {
           }
         />
 
-        {/* Billing */}
+        {/* FIXED: Added Missing Route for Billing (List View) */}
         <Route
           path="/billing"
           element={
@@ -100,7 +101,9 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
+
+        {/* Billing - With ID */}
+         <Route
           path="/billing/:id"
           element={
             <PrivateRoute>
@@ -108,13 +111,15 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        {/* Admin Dashboard */}
         <Route
-           path="/close-ro"
-           element={
-           <PrivateRoute>
-           <CloseRO />
-           </PrivateRoute>
-         }
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
         />
 
         {/* --- Fallback / Redirect --- */}
