@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
 
           {/* 4. Contact Info Section */}
-          <div className="bg-gradient-to-br from-indigo-900/80 to-purple-900/80 p-6 rounded-xl border border-indigo-700 backdrop-blur-sm transform transition duration-500 hover:-translate-y-2 shadow-xl">
+          <div className="bg-linear-to-br from-indigo-900/80 to-purple-900/80 p-6 rounded-xl border border-indigo-700 backdrop-blur-sm transform transition duration-500 hover:-translate-y-2 shadow-xl">
             <h3 className="text-lg font-bold mb-4 text-white">Contact Us</h3>
             <div className="space-y-3 text-gray-300 text-sm">
               <p className="flex items-start gap-3">
