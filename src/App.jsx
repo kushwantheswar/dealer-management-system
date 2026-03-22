@@ -9,7 +9,7 @@ import Billing from "./pages/Billing";
 import Home from "./pages/Home";
 import RepairOrder from "./pages/RepairOrder";
 import PrivateRoute from "./components/auth/PrivateRoute";
-import ViewRO from "./pages/ViewRo"; // ✅ IMPORTANT (match file name exactly)
+import ViewRo from "./pages/ViewRo"; // ✅ IMPORTANT (match file name exactly)
 import ROList from "./pages/ROList";
 import CloseRO from "./pages/CloseRO";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -67,7 +67,7 @@ function App() {
           path="/view-ro/:id"
           element={
             <PrivateRoute>
-              <ViewRO />
+              <ViewRo />
             </PrivateRoute>
           }
         />
