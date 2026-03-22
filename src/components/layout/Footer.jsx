@@ -103,15 +103,15 @@ export default function Footer() {
             <div className="space-y-3 text-gray-300 text-sm">
               <p className="flex items-start gap-3">
                 <span className="text-indigo-400 mt-1">📍</span>
-                <span>123 Garage Street, Automotive City, IN 560001</span>
+                <span>AutoNager 1st Street, Kakinada City, IN 533005</span>
               </p>
               <p className="flex items-center gap-3">
                 <span className="text-indigo-400">📞</span>
-                <span>+91 98765 43210</span>
+                <span>+91 76600 89334</span>
               </p>
               <p className="flex items-center gap-3">
                 <span className="text-indigo-400">✉️</span>
-                <span>support@vehima.com</span>
+                <span>kadakushwantheswar@gmail.com</span>
               </p>
             </div>
           </div>
