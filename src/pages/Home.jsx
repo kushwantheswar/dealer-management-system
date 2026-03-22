@@ -41,7 +41,7 @@ export default function Home() {
       <div className="bg-gray-50 min-h-screen font-sans">
         
         {/* ================= HERO SECTION ================= */}
-        <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 p-8 md:p-12 rounded-b-3xl shadow-lg overflow-hidden">
+        <div className="relative bg-linear-to-r from-indigo-600 to-purple-600 p-8 md:p-12 rounded-b-3xl shadow-lg overflow-hidden">
           {/* Decorative Background Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full -ml-10 -mb-10"></div>

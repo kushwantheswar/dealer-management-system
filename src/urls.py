@@ -1,0 +1,1 @@
+path('api/get-customer/', get_customer_by_vehicle, name='get_customer_by_vehicle'),
