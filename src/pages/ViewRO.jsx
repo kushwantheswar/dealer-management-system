@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { generatePDF } from "../utils/generatePDF";
 
-export default function ViewRO() {
+export default function ViewRo() {
   const { id } = useParams();
   const navigate = useNavigate();
   const reportTemplateRef = useRef(null);
